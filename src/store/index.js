@@ -31,7 +31,7 @@ const stringMiddleware = () => (next) => (action) => {
 //                 compose(applyMiddleware(ReduxThunk, stringMiddleware))
 //                 );
 
-const stire = configureStore({
+const store = configureStore({
     reducer: {heroes, filters},
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(stringMiddleware),
     devTools: process.env.NODE_ENV !== 'production',
